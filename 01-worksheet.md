@@ -62,7 +62,6 @@ Hãy sử dụng **4 Lenses** dưới đây để quét qua hoạt động vận
 
 ### 📝 List bài toán của tôi:
 | # | Subsidiary (VinFast/Xanh SM...) | Lens | Mô tả ngắn bài toán |
-|---|----------------------------------|------|---------------------|
 | 1 |** Vinhomes** |Stakeholder Pain |Cư dân và nhân viên kỹ thuật bị ảnh hưởng khi sự cố thang máy, máy bơm, điều hòa hoặc hệ thống điện chỉ được phát hiện sau khi thiết bị đã hỏng. |
 | 2 |** Vinhomes** |Time-consuming | Đội an ninh phải theo dõi số lượng lớn camera để phát hiện xâm nhập, tụ tập bất thường, đỗ xe sai vị trí hoặc đồ vật bị bỏ quên. Đôi lúc khi xảy ra mất mát sẽ tốn rất nhiều thời gian|
 | 3 |**Vinhomes** | AI-upgrade|Các báo cáo tiêu thụ điện, nước và điều hòa chủ yếu phản ánh dữ liệu quá khứ, chưa chủ động cảnh báo khu vực tiêu thụ bất thường hoặc có nguy cơ rò rỉ. |
@@ -75,7 +74,6 @@ Hãy sử dụng **4 Lenses** dưới đây để quét qua hoạt động vận
 
 Chọn **top 3 bài toán** từ danh sách trên và hoàn thiện **3 Quick Problem Cards** dưới đây (10 phút/card).
 
-```
 ┌─────────────────────────────────────────────────────────────┐
 │ QUICK PROBLEM CARD #01                                      │
 │                                                             │
@@ -240,8 +238,6 @@ Chọn **top 3 bài toán** từ danh sách trên và hoàn thiện **3 Quick Pr
 │                                                             │
 │ Quick Architecture: [ ] No AI  [x] Rule  [x] LLM  [ ] Agent │
 └─────────────────────────────────────────────────────────────┘
-
-```
 
 > [!TIP]
 > **🤖 AI Prompts — Stress-Test thẻ bài toán:**
