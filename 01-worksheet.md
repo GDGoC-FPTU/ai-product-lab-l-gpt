@@ -63,11 +63,11 @@ Hãy sử dụng **4 Lenses** dưới đây để quét qua hoạt động vận
 ### 📝 List bài toán của tôi:
 | # | Subsidiary (VinFast/Xanh SM...) | Lens | Mô tả ngắn bài toán |
 |---|----------------------------------|------|---------------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 |**VinFast** |Lặp lại  |Công nhân kiểm tra ngoại quan thân xe, sơn, khe hở, nội thất bằng mắt |
+| 2 |**Xanh SM** |Tốn thời gian |Nhân viên điều phối taxi phải xử lý nhiều cuộc gọi và cập nhật trạng thái thủ công |
+| 3 |**Vinhomes** |AI có thể tốt hơn |Chatbot CSKH chưa thể xử lý các câu hỏi phức tạp về dịch vụ cư dân |
+| 4 |**Vinmec** |Pain từ người khác |Bác sĩ phải mất nhiều thời gian để phân tích hình ảnh y tế thủ công |
+| 5 |**VinFast**|Tốn thời gian | Bảo trì định kỳ theo lịch thay vì theo tình trạng thực tế| 
 
 ---
 
@@ -77,24 +77,73 @@ Chọn **top 3 bài toán** từ danh sách trên và hoàn thiện **3 Quick Pr
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ QUICK PROBLEM CARD #___                                     │
+│ QUICK PROBLEM CARD #1 #___                                     │
 │                                                             │
-│ Bài toán (1 câu): ________________________________________  │
-│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
+│ Bài toán (1 câu): Công nhân kiểm tra ngoại quan thân xe, sơn, khe hở, nội thất bằng mắt________________________________________  │
+│ Công ty thành viên: [X] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
 │                     [ ] Vinmec   [ ] Khác (Ghi rõ)________  │
 │                                                             │
-│ Ai đang đau (Actor)? ______________________________________ │
+│ Ai đang đau (Actor)?  Công nhân QC, Quản lý chất lượng (Quality Manager),Quản đốc sản xuất, Khách hàng (gián tiếp khi nhận xe có lỗi) │
 │                                                             │
 │ Workflow thủ công hiện tại (3-5 bước):                      │
-│   1. ___ ──> 2. ___ ──> 3. ___ ──> 4. ___                   │
+│   1. Xe hoàn thiện công đoạn ──> 2. Công nhân QC kiểm tra bằng mắt  ──> 3. Ghi nhận lỗi vào checklist/hệ thống  ──> 4. Chuyển xe sang rework hoặc xuất xưởng                   │
 │                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? ___ (⏱ ___ phút/lượt)      │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? _____________________ │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 (⏱ 8-15  phút/lượt)      │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 Computer Vision tự động phát hiện(Lỗi sơn - Trầy xước - Sai khe hở - Thiếu chi tiết - Lệch lắp ráp ) │
 │                                                             │
-│ Đo thành công bằng gì (Metric có số)? ______________________ │
+│ Đo thành công bằng gì (Metric có số)? 
+Giảm thời gian QC từ 10 phút → dưới 4 phút/xe│
 │   VD: "Giảm thời gian soạn phản hồi từ 10 min ──> under 2 min"│
 │                                                             │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [ ] LLM  [ ] Agent │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [ ] LLM  [ ] Agent [X] AI Vision │ 
+└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #2 #___                                     │
+│                                                             │
+│ Bài toán (1 câu): Chatbot CSKH chưa thể xử lý các câu hỏi phức tạp về dịch vụ cư dân │
+│ Công ty thành viên: [] VinFast  [ ] Xanh SM  [X] Vinhomes  │
+│                     [ ] Vinmec   [ ] Khác (Ghi rõ)________  │
+│                                                             │
+│ Ai đang đau (Actor)?  Cư dân, Nhân viên CSKH, Ban quản lý tòa nhà │
+│                                                             │
+│ Workflow thủ công hiện tại (3-5 bước):                      │
+│   1. Cư dân gửi câu hỏi qua chatbot/app
+   → 2. Chatbot không hiểu hoặc trả lời sai
+   → 3. Ticket được chuyển cho nhân viên CSKH
+   → 4. Nhân viên tra cứu quy định, hợp đồng, SOP rồi trả lời                       
+│                                                             │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 4 (⏱ 5-15  phút/lượt)      │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 4 LLM tự động tra cứu quy định, hợp đồng, SOP và trả lời câu hỏi của cư dân │
+│                                                           
+│ Đo thành công bằng gì (Metric có số)? 
+   Giảm thời gian phản hồi từ 10 phút → dưới 2 phút
+│                                                             │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [X] LLM  [ ] Agent [] AI Vision │ 
+└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #3 #___                                     │
+│                                                             │
+│ Bài toán (1 câu): Bảo trì định kỳ theo lịch thay vì theo tình trạng thực tế  │
+│ Công ty thành viên: [X] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
+│                     [ ] Vinmec   [ ] Khác (Ghi rõ)________  │
+│                                                             │
+│ Ai đang đau (Actor)? Kỹ sư bảo trì, Quản lý sản xuất, Quản lý nhà máy, Bộ phận lập kế hoạch sản xuất │
+│                                                             │
+│ Workflow thủ công hiện tại (3-5 bước):                      │
+│   1. Lập lịch bảo trì theo chu kỳ (thời gian/giờ chạy máy) 
+    2.Dừng máy để bảo trì định kỳ                                                      3.Kiểm tra và thay thế linh kiện theo kế hoạch
+    4.Máy tiếp tục vận hành đến kỳ bảo trì tiếp theo                                                    5.Nếu hỏng đột xuất → dừng dây chuyền để sửa chữa│
+│ Bước nào tốn thời gian/lỗi nhất? Bước 5 - Hỏng đột xuất gây dừng dây chuyền (⏱ 1-8 giờ )      │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 5 
+(Phân tích dữ liệu cảm biến (rung, nhiệt độ, dòng điện...)
+-> Dự đoán xác suất hỏng hóc trước khi xảy ra -> Khuyến nghị thời điểm bảo trì tối ưu -> Cảnh báo sớm và ưu tiên thiết bị có rủi ro cao)│
+│                                                             │
+│ Đo thành công bằng gì (Metric có số)? 
+Giảm 20–40% thời gian dừng máy ngoài kế hoạch
+Giảm 10–30% chi phí bảo trì│
+│  
+│                                                             │
+│ Quick Architecture: [X] ML + Time Series + Agent │ 
 └─────────────────────────────────────────────────────────────┘
 ```
 
