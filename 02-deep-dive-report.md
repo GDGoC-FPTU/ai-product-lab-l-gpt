@@ -1,5 +1,19 @@
 # Phase 3 — DEEP-DIVE (Nhóm)
 
+# 👥 Nhóm: L-GPT
+
+## 📋 Thành viên
+
+| STT | Họ và tên | MSSV |
+|:---:|-----------|-------|
+| 1 | Nguyễn Hoài Nam | 2A202602016 |
+| 2 | Nguyễn Anh Tú | 2A202601825 |
+| 3 | Trần Đoàn Quang Vũ | 2A202601999 |
+| 4 | Phan Trần Tường Vy | 2A202601701 |
+| 5 | Nguyễn Quang Vinh | 2A202601517 |
+| 6 | Nguyễn Minh Hiếu | 2A202601685 |
+| 7 | Ngô Minh Phong | 2A202602025 |
+
 ## 1. Quyết định lựa chọn bài toán
 
 Nhóm lựa chọn bài toán:
